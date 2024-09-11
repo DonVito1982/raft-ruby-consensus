@@ -1,6 +1,6 @@
 require "minitest/autorun"
 
-require_relative "../node"
+require_relative "../lib/node"
 require_relative "test_helper"
 
 describe Node do

@@ -1,4 +1,4 @@
-require_relative "node"
-require_relative "network"
+require_relative "lib/node"
+require_relative "lib/network"
 
 Network.instance
