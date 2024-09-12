@@ -27,4 +27,11 @@ describe Node do
     file = "files/test/n_2_state.json"
     assert(Pathname.new(file).exist?)
   end
+
+  it "acknowledges other nodes in the network" do
+    node1 = Node.new(1)
+    node2 = Node.new(2)
+    assert_equal(node1.peers, [2])
+    assert_equal(node2.peers, [1])
+  end
 end

@@ -16,6 +16,10 @@ class Network
     @nodes = []
   end
 
+  def process_message(content)
+    Node.new(content[:receiver]).receive(content.except(:receiver))
+  end
+
   private
 
   def initialize
